@@ -30,3 +30,27 @@
 *.exe
 *.out
 *.app
+
+# Library
+*.qdb
+*.qtl
+*.qpg
+
+
+# Dolphin
+*.directory
+
+# ModelSim
+**/*.bak
+*.cr.mti
+*.wlf
+VHDL/transcript
+VHDL/SPIClient/transcript
+
+# Quartus
+**/db/
+*.qws
+**/incremental_db/
+**/simulation/
+**/output_files/
+**/*.rpt
