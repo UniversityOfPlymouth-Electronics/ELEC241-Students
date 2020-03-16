@@ -24,38 +24,38 @@ uint16_t spi_readwrite(uint16_t data);
 
 
 // **********************************************************************************************************
-// Main function	
+// Main function    
 // **********************************************************************************************************
 
 int main() {
     cs = 1;                     // Chip must be deselected, Chip Select is active LOW
     spi.format(16,0);           // Setup the DATA frame SPI for 16 bit wide word, Clock Polarity 0 and Clock Phase 0 (0)
     spi.frequency(1000000);     // 1MHz clock rate
-		wait_ms(10);
-		spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0x0FFF));
-		wait_ms(1000);
-		spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0x0000));
-		wait_ms(1000);
-	
-		printf("TEST\n\r");
+        wait_us(10000);
+        spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0x0FFF));
+        wait_us(1000000);
+        spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0x0000));
+        wait_us(1000000);
+    
+        printf("TEST\n\r");
     while(true)                 //Loop forever Knight Rider Display on FPGA
     {
-				//Read switch state and write to PuTTY
+                //Read switch state and write to PuTTY
         read_switches();
-				
+                
         //LED Chaser display KIT lives on!
         for (uint16_t i=1;i<=128;i*=2) {
             spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, i));
-            wait_ms(20);
+            wait_us(20000);
         }
         for (uint16_t i=128;i>=1;i/=2) {
             spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, i));
-            wait_ms(20);
+            wait_us(20000);
         }
-				
-				//Wait for 1 second
-				wait_ms(1000);
-				ping();
+                
+                //Wait for 1 second
+                wait_us(1000000);
+                ping();
     }
 }
 
@@ -67,9 +67,9 @@ int main() {
 // **********************************************************************************************************
 
 uint16_t read_switches(void){
-		spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0));
-		wait_us(100);
-    uint16_t sw_val = spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0));	//Turn off all LEDs + read switches (in one full-duplex transaction)
+        spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0));
+        wait_us(100);
+    uint16_t sw_val = spi_readwrite(fpgaWord(LEDS_AND_SWITCHES, 0));    //Turn off all LEDs + read switches (in one full-duplex transaction)
 
     if (sw_val&(1<<0)){ printf("Switch 0 :"); }
     if (sw_val&(1<<1)){ printf("Switch 1 :"); }
@@ -88,12 +88,12 @@ uint16_t read_switches(void){
 
 void ping() {
 
-		for (unsigned short u=0; u<10; u++) {
-			uint16_t rnd = rand() & 0x0FFF;
-			uint16_t ret_val = spi_readwrite(fpgaWord(READBACK, rnd));	//Turn off all LEDs + read switches (in one full-duplex transaction)
-			wait_ms(20);
-			printf("Out: %X, In: %X\n\r", rnd, ret_val);
-		}
+        for (unsigned short u=0; u<10; u++) {
+            uint16_t rnd = rand() & 0x0FFF;
+            uint16_t ret_val = spi_readwrite(fpgaWord(READBACK, rnd));  //Turn off all LEDs + read switches (in one full-duplex transaction)
+            wait_us(20000);
+            printf("Out: %X, In: %X\n\r", rnd, ret_val);
+        }
 }
 
 
@@ -105,11 +105,11 @@ void ping() {
 // return data - the data returned from the FPGA to the MCU over the SPI interface (via MISO)
 // **********************************************************************************************************
 
-uint16_t spi_readwrite(uint16_t data) {	
-	cs = 0;             									//Select the device by seting chip select LOW
-	uint16_t rx = (uint16_t)spi.write(data);				//Send the data - ignore the return data
-	wait_us(1);													//wait for last clock cycle to clear
-	cs = 1;             									//De-Select the device by seting chip select HIGH
-	wait_us(1);
-	return rx;
+uint16_t spi_readwrite(uint16_t data) { 
+    cs = 0;                                                 //Select the device by seting chip select LOW
+    uint16_t rx = (uint16_t)spi.write(data);                //Send the data - ignore the return data
+    wait_us(1);                                                 //wait for last clock cycle to clear
+    cs = 1;                                                 //De-Select the device by seting chip select HIGH
+    wait_us(1);
+    return rx;
 }

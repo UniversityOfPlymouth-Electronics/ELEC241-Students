@@ -22,12 +22,41 @@
 #define __MBED_CONFIG_DATA__
 
 // Configuration parameters
-#define STM32_D11_SPI_ETHERNET_PIN                  PA_7                                          // set by target:NUCLEO_F429ZI
-#define MBED_CONF_PLATFORM_STDIO_BAUD_RATE          9600                                          // set by library:platform
-#define CLOCK_SOURCE                                USE_PLL_HSE_EXTC|USE_PLL_HSE_XTAL|USE_PLL_HSI // set by target:NUCLEO_F429ZI
-#define MBED_CONF_PLATFORM_DEFAULT_SERIAL_BAUD_RATE 9600                                          // set by library:platform
-#define CLOCK_SOURCE_USB                            1                                             // set by target:NUCLEO_F429ZI
-#define MBED_CONF_PLATFORM_STDIO_FLUSH_AT_EXIT      1                                             // set by library:platform
-#define MBED_CONF_PLATFORM_STDIO_CONVERT_NEWLINES   0                                             // set by library:platform
+#define CLOCK_SOURCE                                                      USE_PLL_HSE_EXTC|USE_PLL_HSI            // set by target:NUCLEO_F429ZI
+#define LPTICKER_DELAY_TICKS                                              1                                       // set by target:FAMILY_STM32
+#define MBED_CONF_DRIVERS_UART_SERIAL_RXBUF_SIZE                          256                                     // set by library:drivers
+#define MBED_CONF_DRIVERS_UART_SERIAL_TXBUF_SIZE                          256                                     // set by library:drivers
+#define MBED_CONF_PLATFORM_CRASH_CAPTURE_ENABLED                          1                                       // set by library:platform[NUCLEO_F429ZI]
+#define MBED_CONF_PLATFORM_CTHUNK_COUNT_MAX                               8                                       // set by library:platform
+#define MBED_CONF_PLATFORM_DEFAULT_SERIAL_BAUD_RATE                       9600                                    // set by library:platform
+#define MBED_CONF_PLATFORM_ERROR_ALL_THREADS_INFO                         0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_ERROR_FILENAME_CAPTURE_ENABLED                 0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_ERROR_HIST_ENABLED                             0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_ERROR_HIST_SIZE                                4                                       // set by library:platform
+#define MBED_CONF_PLATFORM_ERROR_REBOOT_MAX                               1                                       // set by library:platform
+#define MBED_CONF_PLATFORM_FATAL_ERROR_AUTO_REBOOT_ENABLED                1                                       // set by library:platform[NUCLEO_F429ZI]
+#define MBED_CONF_PLATFORM_FORCE_NON_COPYABLE_ERROR                       0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_MAX_ERROR_FILENAME_LEN                         16                                      // set by library:platform
+#define MBED_CONF_PLATFORM_MINIMAL_PRINTF_ENABLE_64_BIT                   1                                       // set by library:platform
+#define MBED_CONF_PLATFORM_MINIMAL_PRINTF_ENABLE_FLOATING_POINT           0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_MINIMAL_PRINTF_SET_FLOATING_POINT_MAX_DECIMALS 6                                       // set by library:platform
+#define MBED_CONF_PLATFORM_POLL_USE_LOWPOWER_TIMER                        0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_STDIO_BAUD_RATE                                9600                                    // set by library:platform
+#define MBED_CONF_PLATFORM_STDIO_BUFFERED_SERIAL                          0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_STDIO_CONVERT_NEWLINES                         0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_STDIO_CONVERT_TTY_NEWLINES                     0                                       // set by library:platform
+#define MBED_CONF_PLATFORM_STDIO_FLUSH_AT_EXIT                            1                                       // set by library:platform
+#define MBED_CONF_PLATFORM_USE_MPU                                        1                                       // set by library:platform
+#define MBED_CONF_TARGET_BOOT_STACK_SIZE                                  0x1000                                  // set by target:Target
+#define MBED_CONF_TARGET_CONSOLE_UART                                     1                                       // set by target:Target
+#define MBED_CONF_TARGET_DEEP_SLEEP_LATENCY                               4                                       // set by target:FAMILY_STM32
+#define MBED_CONF_TARGET_INIT_US_TICKER_AT_BOOT                           1                                       // set by target:FAMILY_STM32
+#define MBED_CONF_TARGET_LPTICKER_LPTIM_CLOCK                             1                                       // set by target:FAMILY_STM32
+#define MBED_CONF_TARGET_LPUART_CLOCK_SOURCE                              USE_LPUART_CLK_LSE|USE_LPUART_CLK_PCLK1 // set by target:FAMILY_STM32
+#define MBED_CONF_TARGET_LSE_AVAILABLE                                    1                                       // set by target:FAMILY_STM32
+#define MBED_CONF_TARGET_MPU_ROM_END                                      0x0fffffff                              // set by target:Target
+#define MBED_CONF_TARGET_NETWORK_DEFAULT_INTERFACE_TYPE                   ETHERNET                                // set by target:NUCLEO_F429ZI
+#define MBED_CONF_TARGET_TICKLESS_FROM_US_TICKER                          0                                       // set by target:Target
+#define STM32_D11_SPI_ETHERNET_PIN                                        PA_7                                    // set by target:NUCLEO_F429ZI
 
 #endif
