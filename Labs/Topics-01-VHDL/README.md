@@ -1,5 +1,5 @@
 # FPGA (VHDL) Labs
-The latest / definitive copy of the ELEC240 labs
+The latest / definitive copy of the VHDL labs
 
 
 
