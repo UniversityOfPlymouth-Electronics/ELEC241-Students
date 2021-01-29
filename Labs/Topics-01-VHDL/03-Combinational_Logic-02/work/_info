@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02
+Einv_8of
+Z1 w1606750393
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/INV_8OF.vhd
+Z6 FC:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/INV_8OF.vhd
+l0
+L5
+VT88bd];Sz_PVRSAP8o4^R1
+!s100 5?QNL55W9j]OcKHj=gSOL1
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1611506982
+!i10b 1
+Z9 !s108 1611506982.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/INV_8OF.vhd|
+Z11 !s107 C:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/INV_8OF.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 NoCoverage 1 CvgOpt 0
+Amyinvarray
+R2
+R3
+R4
+DEx4 work 7 inv_8of 0 22 T88bd];Sz_PVRSAP8o4^R1
+l20
+L13
+VGABJbFD8g9IS_e8baFP7>1
+!s100 dl0PnkCnDGgLWQgmKE0[61
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Enotgate
+Z14 w1606750441
+R2
+R3
+R4
+R0
+Z15 8C:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/notgate.vhd
+Z16 FC:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/notgate.vhd
+l0
+L11
+Vf@7P`1jY`aQMi8>6N5<ZB2
+!s100 DX6e2^L9IBbh0CRaQR^7U0
+R7
+33
+Z17 !s110 1611507268
+!i10b 1
+Z18 !s108 1611507268.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/notgate.vhd|
+Z20 !s107 C:/git/ELEC240/FPGA_Labs/03-Combinational_Logic-02/Task 02-04-generate/notgate.vhd|
+!i113 1
+R12
+R13
+Amylogic
+R2
+R3
+R4
+DEx4 work 7 notgate 0 22 f@7P`1jY`aQMi8>6N5<ZB2
+l19
+L17
+Vi<eFL=68UnJNb@D<Z;lW=2
+!s100 Z6DfZ<7OKB5`;S0aT7O_n0
+R7
+33
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
