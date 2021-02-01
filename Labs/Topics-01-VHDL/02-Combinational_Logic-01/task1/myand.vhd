@@ -1,3 +1,4 @@
+-- Nicholas Outram, University of Plymouth
 entity myand is
 
 	port
