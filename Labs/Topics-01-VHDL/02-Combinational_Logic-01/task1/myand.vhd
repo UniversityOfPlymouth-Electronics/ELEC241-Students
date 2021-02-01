@@ -1,4 +1,4 @@
--- Nicholas Outram, University of Plymouth
+-- Nicholas Outram, University of Plymouth 2021
 entity myand is
 
 	port
