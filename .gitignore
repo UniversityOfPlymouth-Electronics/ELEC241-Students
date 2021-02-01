@@ -46,6 +46,8 @@
 *.wlf
 VHDL/transcript
 VHDL/SPIClient/transcript
+**/work/
+*.ini
 
 # Quartus
 **/db/
