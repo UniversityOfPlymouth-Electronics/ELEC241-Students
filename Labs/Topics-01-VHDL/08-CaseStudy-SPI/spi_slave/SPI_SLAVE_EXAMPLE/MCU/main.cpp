@@ -39,15 +39,15 @@ int main() {
         //LED Chaser display KIT lives on!
         for (uint32_t i=1;i<=128;i*=2) {
             spi_readwrite(i);
-            wait_ms(20);
+            wait_us(20000);
         }
         for (uint32_t i=128;i>=1;i/=2) {
             spi_readwrite(i);
-            wait_ms(20);
+            wait_us(20000);
         }
 				
-				//Wait for 1 second
-				wait_ms(1000);
+        //Wait for 1 second
+        wait_us(1000000);
     }
 }
 
@@ -81,7 +81,7 @@ uint16_t read_switches(void){
 uint16_t spi_readwrite(uint16_t data) {	
 	cs = 0;             									//Select the device by seting chip select LOW
 	uint16_t rx = (uint16_t)spi.write(data);				//Send the data - ignore the return data
-	wait_us(1);													//wait for last clock cycle to clear
+	wait_us(1);												//wait for last clock cycle to clear
 	cs = 1;             									//De-Select the device by seting chip select HIGH
 	return rx;
 }
