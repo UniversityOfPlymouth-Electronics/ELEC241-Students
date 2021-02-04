@@ -48,12 +48,14 @@ VHDL/transcript
 VHDL/SPIClient/transcript
 **/work/
 *.ini
+rtl_work
+msim_transcript
+behavioural_run_msim_rtl_vhdl.do
 
 # Quartus
 **/db/
 *.qws
 **/incremental_db/
-**/simulation/
 **/output_files/
 **/*.rpt
 *_generation_script*
@@ -68,6 +70,7 @@ VHDL/SPIClient/transcript
 *.jpg
 # *.mif
 *.pin
+*.sld
 *.pof
 *.ptf.*
 *.qar
