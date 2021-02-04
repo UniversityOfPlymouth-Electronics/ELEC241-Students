@@ -1,4 +1,6 @@
--- Nicholas Outram, University of Plymouth 2021
+-- Nicholas Outram, University of Plymouth January 2021 
+-- Hello Chris
+	--- magic here 
 entity myand is
 
 	port
