@@ -17,6 +17,7 @@ entity my_counter is
 end entity;
 
 architecture counter16_rising of my_counter is
+--	signal x : unsigned ((N-1) downto 0) := (others => '0');	--unsigned vector that supports arithmetic
 begin
 		
 	process (CLK) is
