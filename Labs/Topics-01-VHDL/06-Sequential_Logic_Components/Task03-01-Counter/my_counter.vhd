@@ -12,7 +12,7 @@ entity my_counter is
 	port 
 	(
 		CLK	   : in std_logic;
-		Y      : out std_logic_vector((N-1) downto 0) := ('0', others=>'0')  -- output only
+		Y      : out std_logic_vector((N-1) downto 0) := (others=>'0')  -- output only
 	);
 end entity;
 
@@ -20,7 +20,7 @@ architecture counter16_rising of my_counter is
 begin
 		
 	process (CLK) is
-		variable x : unsigned ((N-1) downto 0) := ('0', others => '0');	--unsigned vector that supports arithmetic
+		variable x : unsigned ((N-1) downto 0) := (others => '0');	--unsigned vector that supports arithmetic
 	begin
 		
 		if (CLK'event and CLK = '1') then
