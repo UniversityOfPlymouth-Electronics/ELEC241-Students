@@ -1,8 +1,5 @@
 vsim work.leading_ones
-add wave -position insertpoint  \
-sim:/leading_ones/X \
-sim:/leading_ones/GO \
-sim:/leading_ones/Y
+add wave -position insertpoint sim:/leading_ones/X sim:/leading_ones/GO sim:/leading_ones/Y
 
 radix signal Y showbase -unsigned
 radix signal X showbase -binary
