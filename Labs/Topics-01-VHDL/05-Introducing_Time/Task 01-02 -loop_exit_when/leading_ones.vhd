@@ -49,7 +49,7 @@ begin
 				idx := idx - 1;					
 				
 				--Are we done?			
-				exit when idx = -1;
+				exit when idx = 0;
 				
 			end loop;
 
