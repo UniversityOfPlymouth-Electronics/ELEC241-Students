@@ -41,6 +41,10 @@
 *.directory
 
 # ModelSim
+*.sdo
+*.vho
+*.vcd
+qsim
 **/*.bak
 *.cr.mti
 *.wlf

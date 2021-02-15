@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/git/ELEC241-Students/Labs/Topics-01-VHDL/06-Sequential_Logic_Components/Task02-01-1-D-FlipFlop/behavioural.bdf
+source_file = 1, C:/git/ELEC241-Students/Labs/Topics-01-VHDL/06-Sequential_Logic_Components/Task02-01-1-D-FlipFlop/behavioural_tests.vwf
+source_file = 1, C:/git/ELEC241-Students/Labs/Topics-01-VHDL/06-Sequential_Logic_Components/Task02-01-1-D-FlipFlop/uop_dlatch.vhd
+source_file = 1, C:/git/ELEC241-Students/Labs/Topics-01-VHDL/06-Sequential_Logic_Components/Task02-01-1-D-FlipFlop/uop_dflipfop.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/git/ELEC241-Students/Labs/Topics-01-VHDL/06-Sequential_Logic_Components/Task02-01-1-D-FlipFlop/db/behavioural.cbx.xml
+design_name = hard_block
+design_name = uop_dflipfop
+instance = comp, \Q~output\, Q~output, uop_dflipfop, 1
+instance = comp, \CLK~input\, CLK~input, uop_dflipfop, 1
+instance = comp, \D~input\, D~input, uop_dflipfop, 1
+instance = comp, \Q~reg0feeder\, Q~reg0feeder, uop_dflipfop, 1
+instance = comp, \Q~reg0\, Q~reg0, uop_dflipfop, 1
