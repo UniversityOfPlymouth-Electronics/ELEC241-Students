@@ -19,21 +19,11 @@ begin
 		--Local declarations
 		variable outputState : std_logic := '0';
 	begin
-	
-		--clock edge detection
-		if ((CLK'event) and (CLK = '0')) then
-			--falling edge detected
-			
-			--Test the input conditions (except 0,0 - which is the condition to latch)
-			if (J = '1') and (K = '0') then
-				outputState := '1';
-			elsif (J = '0' and K = '1') then
-				outputState := '0';
-			elsif (J = '1' and K = '1') then
-				outputState := not outputState;			
-			end if;
-		end if; --end if falling edge
-		--Output (latched) output state
+
+		-- ************************
+		-- WRITE YOUR SOLUTION HERE
+		-- ************************	
+
 		Q <= outputState;
 	end process;
 

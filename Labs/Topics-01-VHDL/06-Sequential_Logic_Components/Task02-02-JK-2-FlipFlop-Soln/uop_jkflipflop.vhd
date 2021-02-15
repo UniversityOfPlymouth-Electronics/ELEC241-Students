@@ -19,8 +19,19 @@ begin
 		--Local declarations
 		variable outputState : std_logic := '0';
 	begin
-	
 
+		-- ************************
+		-- WRITE YOUR SOLUTION HERE
+		-- ************************	
+		if falling_edge(CLK) then
+			if    J='1' and K='0' then
+				outputState := '1';
+			elsif J='0' and K='1' then
+				outputState := '0';
+			elsif J='1' and K='1' then
+				outputState := not outputState;
+			end if; 
+		end if;
 		Q <= outputState;
 	end process;
 
