@@ -1,8 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
---These next two cannot be used together!
---use ieee.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 
 --This entity counts the number of leading '1' terms
@@ -16,7 +14,7 @@ entity my_counter is
 	);
 end entity;
 
-architecture counter16_rising of my_counter is
+architecture v1 of my_counter is
 --	signal x : unsigned ((N-1) downto 0) := (others => '0');	--unsigned vector that supports arithmetic
 begin
 		
@@ -24,11 +22,11 @@ begin
 		variable x : unsigned ((N-1) downto 0) := (others => '0');	--unsigned vector that supports arithmetic
 	begin
 		
-		if (CLK'event and CLK = '1') then
+		if rising_edge(CLK) then
 			x := x + 1;
 			Y <= std_logic_vector(x); --this function is decalred in IEEE.std_logic_unsigned.all
 	    end if;
 	    			
 	end process;
 
-end counter16_rising;
+end v1;

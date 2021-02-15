@@ -21,7 +21,7 @@ begin
 		--Local declarations
 	begin
 		if (RESET = '0') then
-			Q <= ('0',others=>'0');
+			Q <= (others=>'0');
 		else
 			--Latch Q<=D on rising edge is LOAD bit is set HIGH
 			if (clk'event) and (CLK = '1') and (LOAD = '1') then
