@@ -44,6 +44,7 @@
 *.sdo
 *.vho
 *.vcd
+*.bak
 qsim
 **/*.bak
 *.cr.mti

@@ -53,22 +53,6 @@ applicable agreement for further details.
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
-	(input)
-	(rect 144 288 312 304)
-	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "R" (rect 5 0 13 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 92 12)(pt 117 12)(line_width 1))
-		(line (pt 92 4)(pt 117 4)(line_width 1))
-		(line (pt 121 8)(pt 168 8)(line_width 1))
-		(line (pt 92 12)(pt 92 4)(line_width 1))
-		(line (pt 117 4)(pt 121 8)(line_width 1))
-		(line (pt 117 12)(pt 121 8)(line_width 1))
-	)
-	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-)
-(pin
 	(output)
 	(rect 624 112 800 128)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -148,13 +132,6 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
-		(text "RESET" (rect 21 59 56 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
-	)
-	(port
 		(pt 96 32)
 		(output)
 		(text "Q" (rect 0 0 8 12)(font "Arial" ))
@@ -212,10 +189,6 @@ applicable agreement for further details.
 (connector
 	(pt 544 264)
 	(pt 616 264)
-)
-(connector
-	(pt 312 296)
-	(pt 448 296)
 )
 (junction (pt 416 120))
 (junction (pt 392 136))

@@ -13,11 +13,13 @@ ARCHITECTURE uop_dflipfop_arch OF uop_dflipfop_vhd_tst IS
 SIGNAL CLK : STD_LOGIC;
 SIGNAL D : STD_LOGIC;
 SIGNAL Q : STD_LOGIC;
+SIGNAL R : STD_LOGIC;
 
 COMPONENT uop_dflipfop
 	PORT (
 	CLK : IN STD_LOGIC;
 	D : IN STD_LOGIC;
+	R : IN STD_LOGIC;
 	Q : BUFFER STD_LOGIC
 	);
 END COMPONENT;
@@ -28,6 +30,7 @@ BEGIN
 -- list connections between master ports and signals
 	CLK => CLK,
 	D => D,
+	R => R,
 	Q => Q
 	);
 
@@ -36,7 +39,10 @@ BEGIN
 -- ***************************************
 init : PROCESS                                                                                 
 BEGIN                                                        
-        -- code that executes only once                      
+        -- code that executes only once   
+	R <= '0';
+	wait for 10 ps;
+	R <= '1';                  
 	WAIT;                                                       
 END PROCESS init; 
   
@@ -50,7 +56,7 @@ BEGIN
         for n in 1 to 12 loop
 		ck := not ck;
 		CLK <= ck;
-		wait for 50 ns;
+		wait for 50 ps;
 	end loop;  
 	WAIT;                                                        
 END PROCESS clock_gen; 
