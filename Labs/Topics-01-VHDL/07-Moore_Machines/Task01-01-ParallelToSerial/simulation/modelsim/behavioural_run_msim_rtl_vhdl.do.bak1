@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/git/ELEC241-Students/Labs/Topics-01-VHDL/07-Moore_Machines/Task01-01-ParallelToSerial/uop_shiftreg_p2s.vhd}
+

@@ -23,23 +23,24 @@ entity uop_shiftreg_p2s is
 end entity;
 
 architecture p2s of uop_shiftreg_p2s is	
-	signal Nreg : std_logic_vector( (N-1) downto 0 );		--Latch the parallel word here
-	signal idx  : integer := 0;								--Index - defining which bit to write next
+
 begin	
 	process (CLK) is
+		variable idx  : integer := 0;
+		variable Nreg : std_logic_vector( (N-1) downto 0 );
 	begin
-		if (CLK'event and CLK = '1') then
+		if (RESET='0') then
+			idx := 0;
+			Nreg := (others => '0');
+		elsif (CLK'event and CLK = '1') then
 			if (LOAD = '1') then 
 				--LOAD Data into parallel latch
-				Nreg <= DATA_IN;	--Copy the parallel word into the internal register
-				idx <= 0;			--Reset the index to the lsb
-			else
-				DATA_OUT <= Nreg(idx);	
-				if (idx = (N-1)) then
-					idx <= 0;
-				else
-					idx <= idx + 1;
-				end if;
+				Nreg := DATA_IN;	--Copy the parallel word into the internal register
+				idx  := 0;			--Reset the index to the lsb
+				DATA_OUT <= Nreg(idx);
+			elsif (idx < (N-1)) then
+				idx := idx + 1;
+				DATA_OUT <= Nreg(idx) after 2 ps;
 			end if;
 	    end if;			
 	end process;
