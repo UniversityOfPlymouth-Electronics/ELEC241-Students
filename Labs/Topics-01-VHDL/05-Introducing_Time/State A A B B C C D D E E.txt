@@ -1,0 +1,4 @@
+State       A  A  B  B  C  C  D  D  E  E
+Input       0  1  0  1  0  1  0  1  0  1
+Next State  A  B  B  C  D  C  C  E  A  B
+Output      0  0  0  0  0  0  0  0  1  1
