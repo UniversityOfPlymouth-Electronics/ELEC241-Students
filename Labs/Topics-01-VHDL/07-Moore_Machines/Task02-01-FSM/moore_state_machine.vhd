@@ -9,30 +9,19 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity moore_state_machine is
-	generic
-	(
-		P : std_logic_vector(3 downto 0) := "0000"
-	);
-
-	port(
-		clk		 : in	std_logic;
+	generic (P : std_logic_vector(3 downto 0) := "1111");
+	port (  clk	 : in	std_logic;
 		input	 : in	std_logic;
 		reset	 : in	std_logic;
-		output	 : out	std_logic
-	);
-
+		Q	 : out	std_logic );
 end entity;
 
-architecture my_fsm of moore_state_machine is
-
+architecture v1 of moore_state_machine is
 	-- Build an enumerated type for the state machine
 	type state_type is (s0, s1, s2, s3, s4);
-
 	-- Register to hold the current state
 	signal state   : state_type;
-
 begin
-
 	-- Logic to advance to the next state
 	process (clk, reset)
 	begin
@@ -77,19 +66,20 @@ begin
 
 	-- Output depends solely on the current state
 	process (state)
+		variable op : std_logic;
 	begin
 		case state is
 			when s0 =>
-				output <= '0';
+				op := '0';
 			when s1 =>
-				output <= '0';
+				op := '0';
 			when s2 =>
-				output <= '0';
+				op := '0';
 			when s3 =>
-				output <= '0';
+				op := '0';
 			when s4 =>
-				output <= '1';				
+				op := '1';				
 		end case;
+		Q <= op after 5 ps;
 	end process;
-
-end my_fsm;
+end v1;
