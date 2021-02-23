@@ -40,7 +40,7 @@ begin
 			
 				case state is
 					when WAITING=>
-						if START = '1' then
+						if START = '0' then
 							idx := 0;
 							state <= SHIFTING;
 						end if;

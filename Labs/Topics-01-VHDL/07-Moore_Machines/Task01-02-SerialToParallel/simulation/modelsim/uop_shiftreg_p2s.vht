@@ -54,13 +54,14 @@ BEGIN
 
 	-- Value 1
 	DATA_IN <= "10101100";
+	LOAD <= '1';
 	wait until falling_edge(CLK);
 	wait until falling_edge(CLK);
 	
-	LOAD <= '1';
+	LOAD <= '0';
 	wait until falling_edge(CLK);
 
-	LOAD <= '0';
+	LOAD <= '1';
 
 	for n in 1 to 10 loop
 		wait until falling_edge(CLK);
@@ -72,10 +73,10 @@ BEGIN
 	wait until falling_edge(CLK);
 	wait until falling_edge(CLK);
 	
-	LOAD <= '1';
+	LOAD <= '0';
 	wait until falling_edge(CLK);
 
-	LOAD <= '0';
+	LOAD <= '1';
 
 	for n in 1 to 10 loop
 		wait until falling_edge(CLK);

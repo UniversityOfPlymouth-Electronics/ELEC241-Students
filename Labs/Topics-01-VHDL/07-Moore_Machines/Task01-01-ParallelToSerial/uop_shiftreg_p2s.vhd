@@ -32,11 +32,11 @@ begin
 			idx := 0;
 			Nreg := (others => '0');
 		elsif (CLK'event and CLK = '1') then
-			if (LOAD = '1') then 
+			if (LOAD = '0') then 
 				--LOAD Data into parallel latch
 				Nreg := DATA_IN;	--Copy the parallel word into the internal register
 				idx  := 0;		--Reset the index to the lsb
-				DATA_OUT <= Nreg(idx);
+				DATA_OUT <= Nreg(idx) after 2 ps;
 			elsif (idx < (N-1)) then
 				idx := idx + 1;
 				DATA_OUT <= Nreg(idx) after 2 ps;

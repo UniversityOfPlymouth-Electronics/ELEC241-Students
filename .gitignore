@@ -45,6 +45,7 @@
 *.vho
 *.vcd
 *.bak
+*.bak*
 qsim
 **/*.bak
 *.cr.mti
@@ -99,3 +100,6 @@ mbed-os
 
 # system
 .DS_Store
+*.xrf
+*.sft
+*.xrf

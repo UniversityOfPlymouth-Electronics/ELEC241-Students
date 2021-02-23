@@ -94,9 +94,9 @@ BEGIN
 	wait until reset = '1'; 
 	wait until falling_edge(CLK);
 	DATA_IN <= "11110001";
-	LOAD <= '1';
-	wait until falling_edge(CLK);
 	LOAD <= '0';
+	wait until falling_edge(CLK);
+	LOAD <= '1';
 	wait until falling_edge(CLK);
 	wait until falling_edge(CLK);
 	wait until falling_edge(CLK);

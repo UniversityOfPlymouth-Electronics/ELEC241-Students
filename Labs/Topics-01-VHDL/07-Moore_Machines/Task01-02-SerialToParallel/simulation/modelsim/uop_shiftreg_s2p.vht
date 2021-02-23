@@ -93,12 +93,12 @@ always : PROCESS
 BEGIN                                                         
         -- code executes for every event on sensitivity list  
 	wait until RESET = '1';
-	START <= '1';
+	START <= '0';
 	wait until falling_edge(CLK);
 	wait until rising_edge(CLK); wait for 2 ps;
 	DATA_IN <= '1';
 
-	START <= '0';
+	START <= '1';
 	wait until falling_edge(CLK);
 	wait until rising_edge(CLK); wait for 2 ps;
 	DATA_IN <= '1';
