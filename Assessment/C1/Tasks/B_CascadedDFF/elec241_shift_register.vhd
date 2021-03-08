@@ -15,7 +15,6 @@ entity elec241_shift_register is
 	port 
 	(
 		clk		: in std_logic;
-		enable	: in std_logic;
 		data_in	: in std_logic;
 		data_out	: out std_logic
 	);
@@ -24,7 +23,10 @@ end entity;
 
 architecture rtl of elec241_shift_register is
 
-
+-- THE SHIFT REGISTER MUST BE BUILT WITH STRUCTURAL VHDL
+--
+-- You will also need to create a separate D-Flip Flop component (in a separate VHDL file).
+-- (The DFF component is normally created with behavioural VHDL)
 
 begin
 
