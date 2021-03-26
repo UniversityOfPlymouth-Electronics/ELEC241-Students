@@ -50,8 +50,6 @@ qsim
 **/*.bak
 *.cr.mti
 *.wlf
-VHDL/transcript
-VHDL/SPIClient/transcript
 **/work/
 *.ini
 rtl_work
@@ -74,7 +72,9 @@ behavioural_run_msim_rtl_vhdl.do
 *.html
 *.jdi
 *.jpg
+
 # *.mif
+
 *.pin
 *.sld
 *.pof
@@ -89,9 +89,7 @@ behavioural_run_msim_rtl_vhdl.do
 *.summary
 *.tcl
 *.txt # Explicitly add any text files used
-*~
-*example*
-*sopc_*
+*~*
 
 # Mbed Studio
 BUILD
