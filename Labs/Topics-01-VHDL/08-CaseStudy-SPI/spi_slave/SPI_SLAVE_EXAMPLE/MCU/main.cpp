@@ -1,6 +1,6 @@
 #include "mbed.h"
 
-//Define an instance of SPI - this is a SPI master device
+//Define an instance of SPI - this is a 4 WIRE SPI master device
 SPI spi(PA_7, PA_6, PA_5);      // Ordered as: mosi, miso, sclk could use forth parameter ssel
 
 //We often use a separate signal for the chip select. It is VITAL that for each SPI port, only ONE SPI slave device is enabled.
@@ -30,7 +30,8 @@ int main() {
     spi.format(16,0);           // Setup the DATA frame SPI for 16 bit wide word, Clock Polarity 0 and Clock Phase 0 (0)
     spi.frequency(1000000);     // 1MHz clock rate
 
-		printf("TEST\n\r");
+	printf("ELEC241\n\r");
+    
     while(true)                 //Loop forever Knight Rider Display on FPGA
     {
 				//Read switch state and write to PuTTY
@@ -50,6 +51,14 @@ int main() {
         wait_us(1000000);
     }
 }
+
+// 1. The the data types - these are much more portable between platforms
+// uint16_t is ALWAYS an unsigned integer, 16 bits. On this platform, this equates to an unsigned short. 
+// On another platform, it might be a different type.
+//
+// 2. The comment block for each function
+// Purpose, meaning of each parameter and the return type are all described.
+// You need to begin to do this!
 
 // **********************************************************************************************************
 // Function to read back the state of the switches
