@@ -1,0 +1,38 @@
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
+# File: C:\git\ELEC241-Staff\demos\ADXL345\FPGA\AXDL345_Example_pins.csv
+# Generated on: Thu Mar 25 14:51:09 2021
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+ADXL_busy,Output,,,,PIN_B5,,,,,,
+ADXL_CSn,Output,PIN_G5,1,B1_N0,PIN_G5,2.5 V,,,,,
+ADXL_SCLK,Output,PIN_F2,1,B1_N0,PIN_F2,2.5 V,,,,,
+ADXL_SDIO,Bidir,PIN_F1,1,B1_N0,PIN_F1,2.5 V,,,,,
+BUSY_RX,Output,,,,PIN_B3,,,,,,
+BUSY_TX,Output,,,,PIN_A3,,,,,,
+CLOCK_50,Input,PIN_R8,3,B3_N0,PIN_R8,2.5 V,,,,,
+MISO_CPU,Output,PIN_A6,8,B8_N0,PIN_A6,2.5 V,,,,,
+MOSI_CPU,Input,PIN_D6,8,B8_N0,PIN_D6,2.5 V,,,,,
+RESET_N,Input,PIN_J15,5,B5_N0,PIN_J15,2.5 V,,,,,
+RX_0,Output,,,,PIN_A4,,,,,,
+RX_1,Output,,,,PIN_B4,,,,,,
+RX_SYNC,Output,,,,PIN_C2,,,,,,
+SCLK_CPU,Input,PIN_D5,8,B8_N0,PIN_D5,2.5 V,,,,,
+SS_N_CPU,Input,PIN_A2,8,B8_N0,PIN_A2,2.5 V,,,,,
+TX_SYNC,Output,,,,PIN_D8,,,,,,
