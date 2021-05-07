@@ -89,8 +89,8 @@ set_location_assignment PIN_R13 -to LCD_D4
 set_location_assignment PIN_T12 -to LCD_D5
 set_location_assignment PIN_R12 -to LCD_D6
 set_location_assignment PIN_T11 -to LCD_D7
-set_location_assignment PIN_T10 -to LCD_RS
-set_location_assignment PIN_R11 -to LCD_RW
+set_location_assignment PIN_R11 -to LCD_RS
+set_location_assignment PIN_T10 -to LCD_RW
 set_location_assignment PIN_P11 -to LCD_E
 set_location_assignment PIN_A10 -to ADC_CS_N
 set_location_assignment PIN_B10 -to ADC_SADDR
